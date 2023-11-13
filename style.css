@@ -1,0 +1,131 @@
+/* ------------------------------ Goggle Font ------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #031321;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  position: relative;
+  font-size: 26px;
+  font-weight: 600;
+  background-color: #2169f3;
+  color: #fff;
+  padding: 12px 50px 12px 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(245, 245, 245, 0.2);
+}
+
+button::before,
+button::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 4px;
+  width: 15px;
+  height: 5px;
+  transition: 0.5s;
+}
+
+button::before {
+  /* background-color: red; */
+  top: 50%;
+  right: 17.7%;
+  transform: rotate(45deg);
+}
+
+button:hover::before {
+  transform: rotate(135deg);
+}
+
+button::after {
+  top: 50%;
+  right: 12.8%;
+  transform: rotate(-45deg);
+}
+
+button:hover::after {
+  transform: rotate(-135deg);
+}
+
+.wrapper:hover button::before,
+.wrapper button:hover::before {
+  transform: rotate(135deg);
+}
+
+.wrapper:hover button::after,
+.wrapper button:hover::after {
+  transform: rotate(-135deg);
+}
+
+button:hover + ul,
+ul:hover {
+  height: 171.9px;
+}
+
+ul {
+  list-style: none;
+  height: 0px;
+  /* background-color: red; */
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+ul li {
+  /* background-color: red; */
+  width: 151.75px;
+  margin-top: 6px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+ul li a {
+  position: relative;
+  padding: 12px 18px;
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  color: #2169f3;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 1;
+}
+
+ul li a:hover {
+  color: white;
+}
+
+ul li a::after {
+  position: absolute;
+  content: "";
+  top: -50%;
+  right: 0%;
+  background-color: #2169f3;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+ul li a:hover::after {
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+}
